@@ -1,0 +1,19 @@
+.pink {
+  background-color: #ffc0c0;
+  font-family: Verdana, 'Dejavu Sans', sans-serif;
+}
+
+.cool {
+  font-size: 24px;
+}
+
+#second {
+  color: #0000ff;
+  font-size: 36px;
+}
+
+#fourth {
+  background-color: #9fff9f;
+  font-size: 24px;
+  font-weight: bold;
+}
