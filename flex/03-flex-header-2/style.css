@@ -22,7 +22,6 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  border: red 1px solid;
 } 
 
 .profile-image {
@@ -60,5 +59,4 @@ ul {
   gap: 16px;
   margin: 0;
   padding: 0;
-  border: 1px solid green;
 }
