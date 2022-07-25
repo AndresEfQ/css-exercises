@@ -5,6 +5,11 @@
 
 .container {
   text-align: center;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 80px 40px 1fr 40px;
+  gap: 4px;
 }
 
 .container div {
@@ -17,24 +22,39 @@
 
 .header {
   background-color: #393f4d;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
-.logo {
-}
-
-.menu {
+.header .logo {
+  padding: 0;
+  display: grid;
+  align-content: center;
 }
 
 .menu ul {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style-type: none;
+}
+
+.menu li:nth-of-type(1) {
+  grid-column: 2;
 }
 
 .sidebar {
   background-color: #FF7755;
+  grid-row: 2 / -2;
+  display: grid;
+  grid-template-rows: repeat(4, minmax(20px, 1fr));
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -43,16 +63,18 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
-}
-
-.photo  {
+  display: grid;
+  align-content: center;
 }
 
 .sidebar .side-content {
+  padding: 30px 0;
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
+  align-content: center;
 }
 
 .nav {
@@ -60,6 +82,9 @@
 }
 
 .nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
 }
 
 .nav ul li {
@@ -69,6 +94,10 @@
 
 .article {
   background-color: #bccbde;
+  grid-area: 3 / 2 / -2 / -1;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .article p {
@@ -97,6 +126,7 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
 }
 
 .footer p {
